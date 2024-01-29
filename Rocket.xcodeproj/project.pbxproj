@@ -7,15 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324AAA3B2B64E918002443CC /* SelectRoleForRegisterationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3A2B64E918002443CC /* SelectRoleForRegisterationView.swift */; };
+		324AAA3D2B64EAD2002443CC /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3C2B64EAD2002443CC /* RegisterViewModel.swift */; };
+		324AAA3F2B64ED5B002443CC /* RoleSelectionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3E2B64ED5B002443CC /* RoleSelectionButtons.swift */; };
+		324AAA412B65109D002443CC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA402B65109D002443CC /* SignUpView.swift */; };
+		32634E342B639015002412BD /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E332B639015002412BD /* WelcomeView.swift */; };
+		32634E382B63919E002412BD /* ButtonGradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E372B63919E002412BD /* ButtonGradients.swift */; };
+		32634E3B2B63971B002412BD /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E3A2B63971B002412BD /* TextExtension.swift */; };
+		32634E412B63C55D002412BD /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E402B63C55C002412BD /* SignInView.swift */; };
+		32634E442B63CEEC002412BD /* TextFieldCustomStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E432B63CEEC002412BD /* TextFieldCustomStyle.swift */; };
+		32634E492B63FB82002412BD /* BlobShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E482B63FB82002412BD /* BlobShape.swift */; };
+		329668332B67B59C0087068C /* Student_HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329668322B67B59C0087068C /* Student_HomeScreenView.swift */; };
+		329668372B67E7660087068C /* Student_PDFListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329668362B67E7660087068C /* Student_PDFListView.swift */; };
 		32AB230C2B62AAF70033FB37 /* RocketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB230B2B62AAF70033FB37 /* RocketApp.swift */; };
 		32AB230E2B62AAF70033FB37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB230D2B62AAF70033FB37 /* ContentView.swift */; };
 		32AB23102B62AAF90033FB37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32AB230F2B62AAF90033FB37 /* Assets.xcassets */; };
 		32AB23132B62AAF90033FB37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32AB23122B62AAF90033FB37 /* Preview Assets.xcassets */; };
 		32AB23152B62AAF90033FB37 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB23142B62AAF90033FB37 /* Persistence.swift */; };
 		32AB23182B62AAF90033FB37 /* Rocket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32AB23162B62AAF90033FB37 /* Rocket.xcdatamodeld */; };
+		32AB23272B62B9C70033FB37 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32AB23232B62B9C70033FB37 /* Poppins-Regular.ttf */; };
+		32AB23282B62B9C70033FB37 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32AB23242B62B9C70033FB37 /* Poppins-Medium.ttf */; };
+		32AB23292B62B9C70033FB37 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32AB23252B62B9C70033FB37 /* Poppins-Light.ttf */; };
+		32AB232A2B62B9C70033FB37 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32AB23262B62B9C70033FB37 /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		324AAA3A2B64E918002443CC /* SelectRoleForRegisterationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleForRegisterationView.swift; sourceTree = "<group>"; };
+		324AAA3C2B64EAD2002443CC /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		324AAA3E2B64ED5B002443CC /* RoleSelectionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionButtons.swift; sourceTree = "<group>"; };
+		324AAA402B65109D002443CC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		32634E332B639015002412BD /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		32634E372B63919E002412BD /* ButtonGradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGradients.swift; sourceTree = "<group>"; };
+		32634E3A2B63971B002412BD /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
+		32634E402B63C55C002412BD /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		32634E432B63CEEC002412BD /* TextFieldCustomStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomStyle.swift; sourceTree = "<group>"; };
+		32634E482B63FB82002412BD /* BlobShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobShape.swift; sourceTree = "<group>"; };
+		329668322B67B59C0087068C /* Student_HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student_HomeScreenView.swift; sourceTree = "<group>"; };
+		329668362B67E7660087068C /* Student_PDFListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student_PDFListView.swift; sourceTree = "<group>"; };
 		32AB23082B62AAF70033FB37 /* Rocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AB230B2B62AAF70033FB37 /* RocketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketApp.swift; sourceTree = "<group>"; };
 		32AB230D2B62AAF70033FB37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +51,11 @@
 		32AB23122B62AAF90033FB37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		32AB23142B62AAF90033FB37 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		32AB23172B62AAF90033FB37 /* Rocket.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rocket.xcdatamodel; sourceTree = "<group>"; };
+		32AB23232B62B9C70033FB37 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		32AB23242B62B9C70033FB37 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		32AB23252B62B9C70033FB37 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		32AB23262B62B9C70033FB37 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		32AB232B2B62B9D40033FB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +69,125 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32634E312B638FF8002412BD /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				32634E332B639015002412BD /* WelcomeView.swift */,
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		32634E352B639186002412BD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				329668352B67E74B0087068C /* PDFListViews */,
+				32634E452B63FB61002412BD /* Shapes */,
+				32634E422B63CEC9002412BD /* Modifiers */,
+				32634E362B639192002412BD /* Gradients */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		32634E362B639192002412BD /* Gradients */ = {
+			isa = PBXGroup;
+			children = (
+				32634E372B63919E002412BD /* ButtonGradients.swift */,
+			);
+			path = Gradients;
+			sourceTree = "<group>";
+		};
+		32634E392B6396FF002412BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32634E3A2B63971B002412BD /* TextExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		32634E3C2B63C503002412BD /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				32634E3F2B63C546002412BD /* Service */,
+				32634E3E2B63C540002412BD /* ViewModel */,
+				32634E3D2B63C534002412BD /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		32634E3D2B63C534002412BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32634E402B63C55C002412BD /* SignInView.swift */,
+				324AAA3A2B64E918002443CC /* SelectRoleForRegisterationView.swift */,
+				324AAA402B65109D002443CC /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		32634E3E2B63C540002412BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				324AAA3C2B64EAD2002443CC /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		32634E3F2B63C546002412BD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		32634E422B63CEC9002412BD /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				32634E432B63CEEC002412BD /* TextFieldCustomStyle.swift */,
+				324AAA3E2B64ED5B002443CC /* RoleSelectionButtons.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		32634E452B63FB61002412BD /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				32634E482B63FB82002412BD /* BlobShape.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		3296682F2B67B5650087068C /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				329668312B67B57D0087068C /* Teacher */,
+				329668302B67B5770087068C /* Student */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		329668302B67B5770087068C /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				329668322B67B59C0087068C /* Student_HomeScreenView.swift */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		329668312B67B57D0087068C /* Teacher */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Teacher;
+			sourceTree = "<group>";
+		};
+		329668352B67E74B0087068C /* PDFListViews */ = {
+			isa = PBXGroup;
+			children = (
+				329668362B67E7660087068C /* Student_PDFListView.swift */,
+			);
+			path = PDFListViews;
+			sourceTree = "<group>";
+		};
 		32AB22FF2B62AAF70033FB37 = {
 			isa = PBXGroup;
 			children = (
@@ -55,12 +207,16 @@
 		32AB230A2B62AAF70033FB37 /* Rocket */ = {
 			isa = PBXGroup;
 			children = (
-				32AB230B2B62AAF70033FB37 /* RocketApp.swift */,
-				32AB230D2B62AAF70033FB37 /* ContentView.swift */,
-				32AB230F2B62AAF90033FB37 /* Assets.xcassets */,
-				32AB23142B62AAF90033FB37 /* Persistence.swift */,
-				32AB23162B62AAF90033FB37 /* Rocket.xcdatamodeld */,
+				32AB232B2B62B9D40033FB37 /* Info.plist */,
+				32AB23222B62B9830033FB37 /* CoreData */,
+				32AB23212B62B9780033FB37 /* Fonts */,
+				32AB23202B62B96F0033FB37 /* ContentView */,
+				32AB231F2B62B9540033FB37 /* Core */,
+				32AB231E2B62B9500033FB37 /* App */,
+				32634E392B6396FF002412BD /* Extensions */,
+				32634E352B639186002412BD /* Components */,
 				32AB23112B62AAF90033FB37 /* Preview Content */,
+				32AB230F2B62AAF90033FB37 /* Assets.xcassets */,
 			);
 			path = Rocket;
 			sourceTree = "<group>";
@@ -71,6 +227,52 @@
 				32AB23122B62AAF90033FB37 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		32AB231E2B62B9500033FB37 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				32AB230B2B62AAF70033FB37 /* RocketApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		32AB231F2B62B9540033FB37 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3296682F2B67B5650087068C /* HomeScreen */,
+				32634E3C2B63C503002412BD /* Authentication */,
+				32634E312B638FF8002412BD /* WelcomeView */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		32AB23202B62B96F0033FB37 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				32AB230D2B62AAF70033FB37 /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		32AB23212B62B9780033FB37 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				32AB23252B62B9C70033FB37 /* Poppins-Light.ttf */,
+				32AB23242B62B9C70033FB37 /* Poppins-Medium.ttf */,
+				32AB23232B62B9C70033FB37 /* Poppins-Regular.ttf */,
+				32AB23262B62B9C70033FB37 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		32AB23222B62B9830033FB37 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				32AB23162B62AAF90033FB37 /* Rocket.xcdatamodeld */,
+				32AB23142B62AAF90033FB37 /* Persistence.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +333,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32AB23272B62B9C70033FB37 /* Poppins-Regular.ttf in Resources */,
+				32AB23292B62B9C70033FB37 /* Poppins-Light.ttf in Resources */,
+				32AB23282B62B9C70033FB37 /* Poppins-Medium.ttf in Resources */,
+				32AB232A2B62B9C70033FB37 /* Poppins-SemiBold.ttf in Resources */,
 				32AB23132B62AAF90033FB37 /* Preview Assets.xcassets in Resources */,
 				32AB23102B62AAF90033FB37 /* Assets.xcassets in Resources */,
 			);
@@ -143,9 +349,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32634E492B63FB82002412BD /* BlobShape.swift in Sources */,
+				32634E342B639015002412BD /* WelcomeView.swift in Sources */,
+				32634E442B63CEEC002412BD /* TextFieldCustomStyle.swift in Sources */,
+				324AAA3B2B64E918002443CC /* SelectRoleForRegisterationView.swift in Sources */,
+				329668332B67B59C0087068C /* Student_HomeScreenView.swift in Sources */,
+				32634E382B63919E002412BD /* ButtonGradients.swift in Sources */,
 				32AB23152B62AAF90033FB37 /* Persistence.swift in Sources */,
+				32634E3B2B63971B002412BD /* TextExtension.swift in Sources */,
+				324AAA3D2B64EAD2002443CC /* RegisterViewModel.swift in Sources */,
+				324AAA3F2B64ED5B002443CC /* RoleSelectionButtons.swift in Sources */,
 				32AB230E2B62AAF70033FB37 /* ContentView.swift in Sources */,
+				329668372B67E7660087068C /* Student_PDFListView.swift in Sources */,
+				324AAA412B65109D002443CC /* SignUpView.swift in Sources */,
 				32AB230C2B62AAF70033FB37 /* RocketApp.swift in Sources */,
+				32634E412B63C55D002412BD /* SignInView.swift in Sources */,
 				32AB23182B62AAF90033FB37 /* Rocket.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +501,7 @@
 				DEVELOPMENT_TEAM = W4GU8L4AQM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rocket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,6 +531,7 @@
 				DEVELOPMENT_TEAM = W4GU8L4AQM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rocket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
