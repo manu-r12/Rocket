@@ -29,6 +29,14 @@
 		32AB23282B62B9C70033FB37 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32AB23242B62B9C70033FB37 /* Poppins-Medium.ttf */; };
 		32AB23292B62B9C70033FB37 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32AB23252B62B9C70033FB37 /* Poppins-Light.ttf */; };
 		32AB232A2B62B9C70033FB37 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32AB23262B62B9C70033FB37 /* Poppins-SemiBold.ttf */; };
+		32CC36102B68E66A002B7A85 /* TabbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC360F2B68E66A002B7A85 /* TabbarViewModel.swift */; };
+		32CC36122B68F779002B7A85 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC36112B68F779002B7A85 /* TabbarView.swift */; };
+		32CC36152B68FAD3002B7A85 /* CustomTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC36142B68FAD3002B7A85 /* CustomTabbarView.swift */; };
+		32CC36172B691B70002B7A85 /* Teacher_HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC36162B691B70002B7A85 /* Teacher_HomeScreenView.swift */; };
+		32CC361A2B691C55002B7A85 /* RecievedPDFFilesBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC36192B691C55002B7A85 /* RecievedPDFFilesBox.swift */; };
+		32CC361D2B691F51002B7A85 /* PDFFIleIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC361C2B691F51002B7A85 /* PDFFIleIcon.swift */; };
+		32CC36202B6926B8002B7A85 /* ClassroomsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC361F2B6926B8002B7A85 /* ClassroomsListView.swift */; };
+		32CC36222B6928E5002B7A85 /* ClassrommPFPIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC36212B6928E5002B7A85 /* ClassrommPFPIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +64,14 @@
 		32AB23252B62B9C70033FB37 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		32AB23262B62B9C70033FB37 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		32AB232B2B62B9D40033FB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		32CC360F2B68E66A002B7A85 /* TabbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewModel.swift; sourceTree = "<group>"; };
+		32CC36112B68F779002B7A85 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		32CC36142B68FAD3002B7A85 /* CustomTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarView.swift; sourceTree = "<group>"; };
+		32CC36162B691B70002B7A85 /* Teacher_HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher_HomeScreenView.swift; sourceTree = "<group>"; };
+		32CC36192B691C55002B7A85 /* RecievedPDFFilesBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecievedPDFFilesBox.swift; sourceTree = "<group>"; };
+		32CC361C2B691F51002B7A85 /* PDFFIleIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFFIleIcon.swift; sourceTree = "<group>"; };
+		32CC361F2B6926B8002B7A85 /* ClassroomsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomsListView.swift; sourceTree = "<group>"; };
+		32CC36212B6928E5002B7A85 /* ClassrommPFPIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassrommPFPIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +96,12 @@
 		32634E352B639186002412BD /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				32CC361E2B692693002B7A85 /* ClassroomsListView */,
+				32CC36182B691C30002B7A85 /* RecievedPDFFIlesBox */,
 				329668352B67E74B0087068C /* PDFListViews */,
 				32634E452B63FB61002412BD /* Shapes */,
 				32634E422B63CEC9002412BD /* Modifiers */,
+				32CC361B2B691F40002B7A85 /* CustomImageIcons */,
 				32634E362B639192002412BD /* Gradients */,
 			);
 			path = Components;
@@ -176,6 +195,7 @@
 		329668312B67B57D0087068C /* Teacher */ = {
 			isa = PBXGroup;
 			children = (
+				32CC36162B691B70002B7A85 /* Teacher_HomeScreenView.swift */,
 			);
 			path = Teacher;
 			sourceTree = "<group>";
@@ -240,6 +260,7 @@
 		32AB231F2B62B9540033FB37 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				32CC360E2B68E592002B7A85 /* Tabbar */,
 				3296682F2B67B5650087068C /* HomeScreen */,
 				32634E3C2B63C503002412BD /* Authentication */,
 				32634E312B638FF8002412BD /* WelcomeView */,
@@ -273,6 +294,41 @@
 				32AB23142B62AAF90033FB37 /* Persistence.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		32CC360E2B68E592002B7A85 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				32CC360F2B68E66A002B7A85 /* TabbarViewModel.swift */,
+				32CC36112B68F779002B7A85 /* TabbarView.swift */,
+				32CC36142B68FAD3002B7A85 /* CustomTabbarView.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		32CC36182B691C30002B7A85 /* RecievedPDFFIlesBox */ = {
+			isa = PBXGroup;
+			children = (
+				32CC36192B691C55002B7A85 /* RecievedPDFFilesBox.swift */,
+			);
+			path = RecievedPDFFIlesBox;
+			sourceTree = "<group>";
+		};
+		32CC361B2B691F40002B7A85 /* CustomImageIcons */ = {
+			isa = PBXGroup;
+			children = (
+				32CC361C2B691F51002B7A85 /* PDFFIleIcon.swift */,
+				32CC36212B6928E5002B7A85 /* ClassrommPFPIcon.swift */,
+			);
+			path = CustomImageIcons;
+			sourceTree = "<group>";
+		};
+		32CC361E2B692693002B7A85 /* ClassroomsListView */ = {
+			isa = PBXGroup;
+			children = (
+				32CC361F2B6926B8002B7A85 /* ClassroomsListView.swift */,
+			);
+			path = ClassroomsListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,21 +406,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				32634E492B63FB82002412BD /* BlobShape.swift in Sources */,
+				32CC361D2B691F51002B7A85 /* PDFFIleIcon.swift in Sources */,
+				32CC36122B68F779002B7A85 /* TabbarView.swift in Sources */,
 				32634E342B639015002412BD /* WelcomeView.swift in Sources */,
 				32634E442B63CEEC002412BD /* TextFieldCustomStyle.swift in Sources */,
 				324AAA3B2B64E918002443CC /* SelectRoleForRegisterationView.swift in Sources */,
 				329668332B67B59C0087068C /* Student_HomeScreenView.swift in Sources */,
 				32634E382B63919E002412BD /* ButtonGradients.swift in Sources */,
 				32AB23152B62AAF90033FB37 /* Persistence.swift in Sources */,
+				32CC36222B6928E5002B7A85 /* ClassrommPFPIcon.swift in Sources */,
 				32634E3B2B63971B002412BD /* TextExtension.swift in Sources */,
 				324AAA3D2B64EAD2002443CC /* RegisterViewModel.swift in Sources */,
 				324AAA3F2B64ED5B002443CC /* RoleSelectionButtons.swift in Sources */,
+				32CC36102B68E66A002B7A85 /* TabbarViewModel.swift in Sources */,
 				32AB230E2B62AAF70033FB37 /* ContentView.swift in Sources */,
+				32CC36202B6926B8002B7A85 /* ClassroomsListView.swift in Sources */,
 				329668372B67E7660087068C /* Student_PDFListView.swift in Sources */,
 				324AAA412B65109D002443CC /* SignUpView.swift in Sources */,
 				32AB230C2B62AAF70033FB37 /* RocketApp.swift in Sources */,
+				32CC36172B691B70002B7A85 /* Teacher_HomeScreenView.swift in Sources */,
 				32634E412B63C55D002412BD /* SignInView.swift in Sources */,
 				32AB23182B62AAF90033FB37 /* Rocket.xcdatamodeld in Sources */,
+				32CC36152B68FAD3002B7A85 /* CustomTabbarView.swift in Sources */,
+				32CC361A2B691C55002B7A85 /* RecievedPDFFilesBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
