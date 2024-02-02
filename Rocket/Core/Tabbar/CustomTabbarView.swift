@@ -29,9 +29,7 @@ struct CustomTabbarView: View {
                             .foregroundStyle(.white)
                             .fontWeight(.medium)
                             .padding(10)
-                        
                             .offset(y: currentTab == tab ? -7 : 0)
-                           
                     })
                     
                 }
@@ -41,11 +39,12 @@ struct CustomTabbarView: View {
         }
         .frame(height: 24)
         .padding(.top, 30)
-        .background(.ultraThinMaterial.opacity(0.3))
+        .background(.ultraThinMaterial)
         .background(
             RoundedRectangle(cornerRadius: 0)
-                .fill(LinearGradient(colors: ButtonGradients.gradient_color_purpleToblue, startPoint: .topLeading, endPoint: .bottomTrailing))
+                .fill(LinearGradient(colors: ButtonGradients.gradients_colors, startPoint: .topLeading, endPoint: .bottomTrailing))
                 .ignoresSafeArea(.all)
+              
         )
         
         

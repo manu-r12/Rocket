@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ClassrommPFPIcon: View {
+struct ClassroomCirclePFP: View {
     var body: some View {
         Image("history")
             .resizable()
@@ -19,5 +19,5 @@ struct ClassrommPFPIcon: View {
 }
 
 #Preview {
-    ClassrommPFPIcon()
+    ClassroomCirclePFP()
 }

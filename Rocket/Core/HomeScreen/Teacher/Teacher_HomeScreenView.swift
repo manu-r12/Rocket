@@ -34,7 +34,7 @@ struct Teacher_HomeScreenView: View {
             .padding(.horizontal)
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
             
-            
+             
             //Scroll List View of recent files
             VStack{
                 ScrollView(){

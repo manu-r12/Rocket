@@ -15,20 +15,23 @@ struct TabbarView: View {
     }
     
     var body: some View {
-        VStack(spacing: -12.0){
-            TabView(selection: $currentTab){
-                Student_HomeScreenView()
-                    .tag(Tab.home)
+        NavigationView  {
+            VStack(spacing: -12.0){
+                TabView(selection: $currentTab){
+                    Student_HomeScreenView()
+                        .tag(Tab.home)
+                    
+                    Student_ClassroomsView()
+                        .tag(Tab.classrooms)
+                    
+                    
+                    Text("Conversations View")
+                        .tag(Tab.conversations)
+                }
                 
-                Teacher_HomeScreenView()
-                    .tag(Tab.classrooms)
-                
-                
-                Text("Conversations View")
-                    .tag(Tab.conversations)
+                CustomTabbarView(currentTab: $currentTab)
             }
-            
-            CustomTabbarView(currentTab: $currentTab)
+            .ignoresSafeArea(.keyboard)
         }
         
     }

@@ -13,7 +13,7 @@ struct ClassroomsListView: View {
         VStack{
             HStack(spacing: 30){
                
-                ClassrommPFPIcon()
+                ClassroomCirclePFP()
                 
                 VStack(alignment: .leading,spacing: 3){
                     HStack {
