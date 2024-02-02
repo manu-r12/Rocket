@@ -1,20 +1,20 @@
 //
-//  Student_HomeScreenView.swift
+//  Teacher_HomeScreenView().swift
 //  Rocket
 //
-//  Created by Manu on 2024-01-29.
+//  Created by Manu on 2024-01-30.
 //
 
 import SwiftUI
 
-struct Student_HomeScreenView: View {
+struct Teacher_HomeScreenView: View {
     @State var searchTxtField: String = ""
     var body: some View {
         VStack(spacing: 1){
             
             VStack(alignment: .leading){
                 HStack(spacing: 20){
-                    Image("teacher2")
+                    Image("teacher1")
                         .resizable()
                         .scaledToFill()
                         .frame(width: 60, height: 60)
@@ -25,7 +25,7 @@ struct Student_HomeScreenView: View {
                             .font(.custom("Poppins-SemiBold", size: 24))
                             .foregroundStyle(.customBlue1)
                         
-                        Text("Manu R")
+                        Text("Ella Allen")
                             .font(.custom("Poppins-Medium", size: 18))
                             .foregroundStyle(.uniBlack)
                     }
@@ -34,7 +34,7 @@ struct Student_HomeScreenView: View {
             .padding(.horizontal)
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
             
-            
+             
             //Scroll List View of recent files
             VStack{
                 ScrollView(){
@@ -64,19 +64,41 @@ struct Student_HomeScreenView: View {
                     
                     VStack{
                         
-                        VStack{
+                        VStack(alignment: .leading){
                             
-                            Text("Recent Files >")
+                            Text("Recieved Files >")
                                 .font(.custom("Poppins-Regular", size: 17))
+                                .padding(.horizontal)
+                            
+                            
+                            ScrollView(.horizontal){
+                                
+                                HStack(spacing: 20){
+                                    ForEach(0...10, id: \.self){file in
+                                    
+                                        RecievedPDFFilesBox()
+                                    }
+                                }
+                                .padding(.horizontal)
+                                .padding(.bottom)
+                            }
+
+                            .scrollIndicators(.hidden)
                         }
-                        .padding()
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                         .padding(.top, 10)
                         
-                        VStack(spacing: 20){
+                        
+                        Text("Your Classrooms >")
+                            .font(.custom("Poppins-Regular", size: 17))
+                            .padding(.horizontal)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        VStack(spacing: 16){
                             ForEach(0...10, id:\.self){file in
                                 
-                                Student_PDFListView()
+                                ClassroomsListView()
+                                   
                                 
                             }
                         }
@@ -89,10 +111,9 @@ struct Student_HomeScreenView: View {
             
             Spacer()
         }
-        
     }
 }
 
 #Preview {
-    Student_HomeScreenView()
+    Teacher_HomeScreenView()
 }

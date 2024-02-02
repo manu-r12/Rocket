@@ -10,13 +10,11 @@ import SwiftUI
 struct Student_PDFListView: View {
     var body: some View {
         VStack{
-            HStack(alignment: .center, spacing: 0){
-                Image("pdf_icon")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 70)
+            HStack(spacing: 30){
+               
+                PDFFIleIcon()
                 
-                VStack(alignment: .leading,spacing: 9){
+                VStack(alignment: .leading,spacing: 3){
                     HStack {
                         Text("Science_Assignment 2.pdf")
                             .font(.custom("Poppins-Regular", size: 16))
@@ -32,30 +30,24 @@ struct Student_PDFListView: View {
                     HStack{
                         Text("Checked")
                             .font(.custom("Poppins-Regular", size: 12))
-                            .frame(width: 70)
-                            .padding(3)
-                            .background(Color(.customGreen))
-                            .foregroundStyle(.uniWhite)
+//                            .frame(width: 70)
+//                            .padding(3)
+//                            .background(ButtonGradients.Linear_Gradient_1)
+                            .foregroundStyle(.gray)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                     
                         Text("Submitted 2hr ago")
                             .font(.custom("Poppins-Regular", size: 12))
                             .foregroundStyle(.gray)
                     }
-                         
                 }
-                .frame(maxWidth: .infinity)
-               
             }
-//            .background(.gray)
-         
-            
+            .padding(20)
+            .background(Color(.uniWhite))
+            .clipShape(RoundedRectangle(cornerRadius: 18))
+            .shadow(color: Color(.systemGray5), radius: 5, x: 0, y: 0)
         }
-        .padding(20)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        Divider()
-        
-      
+        .frame(maxWidth: .infinity)
     }
 }
 

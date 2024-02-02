@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct RocketApp: App {
+ struct RocketApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
