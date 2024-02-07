@@ -56,6 +56,9 @@ struct SelectRoleForSignUpView: View {
                 
                 if viewModel.selectedRole != .nothingSelected {
                     Button {
+                        Task {
+                           await viewModel.signUp()
+                        }
                         
                     } label: {
                         Text("Complete Sign Up")

@@ -3,19 +3,6 @@ import Foundation
 import GoogleSignIn
 import Combine
 
-//
-//do {
-//    let result =  try await signUpReq(withToken: userIdToken?.tokenString ?? "no token")
-//    switch result {
-//    case .success(let data):
-//        print(data)
-//    case .failure(let failure):
-//        print(failure.localizedDescription)
-//    }
-//}catch {
-//    print("Debug: Error In :  'func signUp()' function", error.localizedDescription)
-//}
-
 
 struct User: Codable {
     let id: String
@@ -23,6 +10,7 @@ struct User: Codable {
     let name: String
     let profilePic: String
     let role: String
+    let email : String
     
 }
 
@@ -32,7 +20,6 @@ enum RoleSelection {
     case teacher
     case nothingSelected
 }
-
 
 
 
@@ -47,11 +34,12 @@ class SignUpViewModel: ObservableObject {
     static let shared = SignUpViewModel()
     
     init(){
-        setUpCombine()
+        // as soon as the current user variable changes this function will also trigger itself
+        setUpSubscriber()
     }
 
     
-    func setUpCombine(){
+    func setUpSubscriber(){
         GoogleAuthentication.shared.$currentUser.sink { user in
             self.currentUser = user
 
@@ -63,27 +51,34 @@ class SignUpViewModel: ObservableObject {
         guard let tokenString = currentUser?.idToken?.tokenString else { 
             print("Debug: No Token")
             return }
-        do{
-            let result = try await signUpReq(withToken: tokenString)
-            switch result {
-            case .success(let success):
-                print(success)
-            case .failure(let failure):
-                print(failure.localizedDescription)
+        
+        if let name = currentUser?.profile?.name, let profilePic =  currentUser?.profile?.imageURL(withDimension: 100)?.absoluteString, let email = currentUser?.profile?.email {
+            do{
+                let user = User(id: UUID().uuidString, idToken: tokenString, name: name, profilePic: profilePic, role: selectedRole == .teacher ? "teacher": "student", email: email)
+                let result = try await signUpReq(withUser: user)
+                switch result {
+                case .success(let success):
+                    print(success)
+                    print("Hello")
+                case .failure(let failure):
+                    print(failure.localizedDescription)
+                }
+            }catch {
+                print(error.localizedDescription)
             }
-        }catch {
-            print(error.localizedDescription)
         }
+      
     }
     
     
     @MainActor
-    func signUpReq(withToken token: String) async throws -> Result<Data, Error> {
+    func signUpReq(withUser user: User) async throws -> Result<Data, Error> {
         let url = URL(string: "http://localhost:8000/signUp")
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        let encodedData = try? JSONEncoder().encode(["idToken" : token])
+        let encoder = JSONEncoder()
+        let encodedData =  try encoder.encode(user)
         request.httpBody = encodedData
         
         do {

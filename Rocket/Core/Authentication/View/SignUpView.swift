@@ -54,7 +54,7 @@ struct SignUpView: View {
                             
                             Button(action: {
                                 Task {
-                                    await viewModel.signUp()
+                                    GoogleAuthentication.shared.signIn()
                                 }
                                 
                             }, label: {
