@@ -28,7 +28,7 @@ struct ConversationView: View {
             // Messages
             ScrollView{
                 VStack {
-                    ForEach(0...20, id: \.self){msg in
+                    ForEach(0..<1, id: \.self){msg in
                        
                         ChatBubbleItem()
                     }

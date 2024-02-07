@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
-
+import GoogleSignInSwift
+import GoogleSignIn
 struct SignInView: View {
     @State var email: String = ""
     @State var username: String = ""
     @State var password: String = ""
+    
+    @EnvironmentObject var authModel: GoogleAuthentication
     
     var body: some View {
         VStack {
@@ -19,6 +22,11 @@ struct SignInView: View {
                 VStack(alignment: .leading, spacing: 20){
                     Text("Sign In")
                         .font(.custom("Poppins-Medium", size: 51))
+                        .onTapGesture {
+                            print("The Current User is:",
+                                  authModel.currentUser?.profile?.name ?? "No user")
+                            print("Token:",GoogleAuthentication.shared.userIdToken)
+                        }
                     
                     HStack(spacing: 7){
                         Text("Dont have an account?")
@@ -28,7 +36,7 @@ struct SignInView: View {
                         
                         
                         NavigationLink("Sign Up") {
-                                SelectRoleForSignUpView()
+                                SignUpView()
                                 .navigationBarBackButtonHidden(true)
                         }
                         .foregroundStyle(LinearGradient(colors: ButtonGradients.gradients_colors, startPoint: .leading, endPoint: .trailing))
@@ -52,7 +60,10 @@ struct SignInView: View {
                             .modifier(TextFieldCustomStyle())
                     }
                     
-                    Button(action: {}, label: {
+                  
+                    Button(action: {
+                        authModel.signIn()
+                    }, label: {
                         Text("Sign In")
                             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 58)
                             .foregroundStyle(.uniWhite)

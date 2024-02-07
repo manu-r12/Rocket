@@ -67,25 +67,22 @@ struct DispatchWorkView: View {
                             .textEditorStyle(PlainTextEditorStyle())
                             .background(.thinMaterial)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
-                           
+                        
                     }
                 }
                 .padding()
-                
-                
                 Button(action: {
-                    
                     withAnimation(.spring) {
                         is_selectClassSheetPresented = true
                     }
                 }
                        , label: {
                     Text("Send")
-                    .frame(width: 280, height: 55)
-                    .font(.custom("Poppins-SemiBold", size: 19))
-                    .foregroundStyle(.white)
-                    .background(LinearGradient(gradient: ButtonGradients.buttonGradient_1, startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: .trailing))
-                    .clipShape(Capsule())
+                        .frame(width: 280, height: 55)
+                        .font(.custom("Poppins-SemiBold", size: 19))
+                        .foregroundStyle(.white)
+                        .background(LinearGradient(gradient: ButtonGradients.buttonGradient_1, startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: .trailing))
+                        .clipShape(Capsule())
                 })
             }
             

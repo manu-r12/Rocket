@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		324AAA3B2B64E918002443CC /* SelectRoleForRegisterationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3A2B64E918002443CC /* SelectRoleForRegisterationView.swift */; };
-		324AAA3D2B64EAD2002443CC /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3C2B64EAD2002443CC /* RegisterViewModel.swift */; };
+		324AAA3D2B64EAD2002443CC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3C2B64EAD2002443CC /* SignUpViewModel.swift */; };
 		324AAA3F2B64ED5B002443CC /* RoleSelectionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3E2B64ED5B002443CC /* RoleSelectionButtons.swift */; };
 		324AAA412B65109D002443CC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA402B65109D002443CC /* SignUpView.swift */; };
 		32634E342B639015002412BD /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E332B639015002412BD /* WelcomeView.swift */; };
@@ -17,6 +17,9 @@
 		32634E412B63C55D002412BD /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E402B63C55C002412BD /* SignInView.swift */; };
 		32634E442B63CEEC002412BD /* TextFieldCustomStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E432B63CEEC002412BD /* TextFieldCustomStyle.swift */; };
 		32634E492B63FB82002412BD /* BlobShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E482B63FB82002412BD /* BlobShape.swift */; };
+		3283F7BC2B6FB38D00A8164D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3283F7BB2B6FB38D00A8164D /* GoogleSignIn */; };
+		3283F7BE2B6FB38D00A8164D /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3283F7BD2B6FB38D00A8164D /* GoogleSignInSwift */; };
+		3283F7C02B6FBAD600A8164D /* SignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283F7BF2B6FBAD600A8164D /* SignViewModel.swift */; };
 		329668332B67B59C0087068C /* Student_HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329668322B67B59C0087068C /* Student_HomeScreenView.swift */; };
 		329668372B67E7660087068C /* Student_PDFListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329668362B67E7660087068C /* Student_PDFListView.swift */; };
 		32AB230C2B62AAF70033FB37 /* RocketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB230B2B62AAF70033FB37 /* RocketApp.swift */; };
@@ -45,6 +48,7 @@
 		32D1E8B62B6CED1B005E1BE8 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E8B52B6CED1B005E1BE8 /* ConversationView.swift */; };
 		32D1E8B92B6CEDC8005E1BE8 /* ChatBubbleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E8B82B6CEDC8005E1BE8 /* ChatBubbleItem.swift */; };
 		32D1E8BB2B6D11CA005E1BE8 /* SelectClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E8BA2B6D11CA005E1BE8 /* SelectClassView.swift */; };
+		32D4DFF52B70B4CD0075E689 /* GoogleAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4DFF42B70B4CD0075E689 /* GoogleAuthentication.swift */; };
 		32DC93272B6A79F500559C65 /* Student_ClassroomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC93262B6A79F500559C65 /* Student_ClassroomsView.swift */; };
 		32DC932A2B6A7A7500559C65 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC93292B6A7A7500559C65 /* ProfileHeader.swift */; };
 		32DC932D2B6A7B4400559C65 /* Search_Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC932C2B6A7B4400559C65 /* Search_Bar.swift */; };
@@ -53,7 +57,7 @@
 
 /* Begin PBXFileReference section */
 		324AAA3A2B64E918002443CC /* SelectRoleForRegisterationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleForRegisterationView.swift; sourceTree = "<group>"; };
-		324AAA3C2B64EAD2002443CC /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		324AAA3C2B64EAD2002443CC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		324AAA3E2B64ED5B002443CC /* RoleSelectionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionButtons.swift; sourceTree = "<group>"; };
 		324AAA402B65109D002443CC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		32634E332B639015002412BD /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 		32634E402B63C55C002412BD /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		32634E432B63CEEC002412BD /* TextFieldCustomStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomStyle.swift; sourceTree = "<group>"; };
 		32634E482B63FB82002412BD /* BlobShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobShape.swift; sourceTree = "<group>"; };
+		3283F7BF2B6FBAD600A8164D /* SignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewModel.swift; sourceTree = "<group>"; };
 		329668322B67B59C0087068C /* Student_HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student_HomeScreenView.swift; sourceTree = "<group>"; };
 		329668362B67E7660087068C /* Student_PDFListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student_PDFListView.swift; sourceTree = "<group>"; };
 		32AB23082B62AAF70033FB37 /* Rocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +97,7 @@
 		32D1E8B52B6CED1B005E1BE8 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		32D1E8B82B6CEDC8005E1BE8 /* ChatBubbleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleItem.swift; sourceTree = "<group>"; };
 		32D1E8BA2B6D11CA005E1BE8 /* SelectClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectClassView.swift; sourceTree = "<group>"; };
+		32D4DFF42B70B4CD0075E689 /* GoogleAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthentication.swift; sourceTree = "<group>"; };
 		32DC93262B6A79F500559C65 /* Student_ClassroomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student_ClassroomsView.swift; sourceTree = "<group>"; };
 		32DC93292B6A7A7500559C65 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		32DC932C2B6A7B4400559C65 /* Search_Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search_Bar.swift; sourceTree = "<group>"; };
@@ -103,6 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3283F7BC2B6FB38D00A8164D /* GoogleSignIn in Frameworks */,
+				3283F7BE2B6FB38D00A8164D /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +162,6 @@
 		32634E3C2B63C503002412BD /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				32634E3F2B63C546002412BD /* Service */,
 				32634E3E2B63C540002412BD /* ViewModel */,
 				32634E3D2B63C534002412BD /* View */,
 			);
@@ -174,16 +181,10 @@
 		32634E3E2B63C540002412BD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				324AAA3C2B64EAD2002443CC /* RegisterViewModel.swift */,
+				324AAA3C2B64EAD2002443CC /* SignUpViewModel.swift */,
+				3283F7BF2B6FBAD600A8164D /* SignViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		32634E3F2B63C546002412BD /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		32634E422B63CEC9002412BD /* Modifiers */ = {
@@ -255,6 +256,7 @@
 		32AB230A2B62AAF70033FB37 /* Rocket */ = {
 			isa = PBXGroup;
 			children = (
+				32D4DFF32B70B4AC0075E689 /* GoogleAuthentication */,
 				32AB232B2B62B9D40033FB37 /* Info.plist */,
 				32AB23222B62B9830033FB37 /* CoreData */,
 				32AB23212B62B9780033FB37 /* Fonts */,
@@ -404,6 +406,14 @@
 			path = ChatBubbleItem;
 			sourceTree = "<group>";
 		};
+		32D4DFF32B70B4AC0075E689 /* GoogleAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				32D4DFF42B70B4CD0075E689 /* GoogleAuthentication.swift */,
+			);
+			path = GoogleAuthentication;
+			sourceTree = "<group>";
+		};
 		32DC93242B6A79DA00559C65 /* Classrooms */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +473,10 @@
 			dependencies = (
 			);
 			name = Rocket;
+			packageProductDependencies = (
+				3283F7BB2B6FB38D00A8164D /* GoogleSignIn */,
+				3283F7BD2B6FB38D00A8164D /* GoogleSignInSwift */,
+			);
 			productName = Rocket;
 			productReference = 32AB23082B62AAF70033FB37 /* Rocket.app */;
 			productType = "com.apple.product-type.application";
@@ -491,6 +505,9 @@
 				Base,
 			);
 			mainGroup = 32AB22FF2B62AAF70033FB37;
+			packageReferences = (
+				3283F7BA2B6FB38D00A8164D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 32AB23092B62AAF70033FB37 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -528,10 +545,12 @@
 				32DC93272B6A79F500559C65 /* Student_ClassroomsView.swift in Sources */,
 				32634E342B639015002412BD /* WelcomeView.swift in Sources */,
 				32634E442B63CEEC002412BD /* TextFieldCustomStyle.swift in Sources */,
+				3283F7C02B6FBAD600A8164D /* SignViewModel.swift in Sources */,
 				324AAA3B2B64E918002443CC /* SelectRoleForRegisterationView.swift in Sources */,
 				329668332B67B59C0087068C /* Student_HomeScreenView.swift in Sources */,
 				32634E382B63919E002412BD /* ButtonGradients.swift in Sources */,
 				32AB23152B62AAF90033FB37 /* Persistence.swift in Sources */,
+				32D4DFF52B70B4CD0075E689 /* GoogleAuthentication.swift in Sources */,
 				32D1E8B62B6CED1B005E1BE8 /* ConversationView.swift in Sources */,
 				32CC36222B6928E5002B7A85 /* ClassroomCirclePFP.swift in Sources */,
 				32D1E8B22B6CCBA0005E1BE8 /* AssignmentInfoView.swift in Sources */,
@@ -539,7 +558,7 @@
 				32DC932D2B6A7B4400559C65 /* Search_Bar.swift in Sources */,
 				32634E3B2B63971B002412BD /* TextExtension.swift in Sources */,
 				32D1E8A72B6CAEEC005E1BE8 /* Student_JoinedClassrormView.swift in Sources */,
-				324AAA3D2B64EAD2002443CC /* RegisterViewModel.swift in Sources */,
+				324AAA3D2B64EAD2002443CC /* SignUpViewModel.swift in Sources */,
 				324AAA3F2B64ED5B002443CC /* RoleSelectionButtons.swift in Sources */,
 				32CC36102B68E66A002B7A85 /* TabbarViewModel.swift in Sources */,
 				32D1E8AC2B6CB49E005E1BE8 /* AssignedWorkBoxItem.swift in Sources */,
@@ -764,6 +783,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3283F7BA2B6FB38D00A8164D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3283F7BB2B6FB38D00A8164D /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3283F7BA2B6FB38D00A8164D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		3283F7BD2B6FB38D00A8164D /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3283F7BA2B6FB38D00A8164D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		32AB23162B62AAF90033FB37 /* Rocket.xcdatamodeld */ = {

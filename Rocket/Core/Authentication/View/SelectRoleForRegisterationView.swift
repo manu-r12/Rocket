@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SelectRoleForSignUpView: View {
-    @State var selectedRole: RoleSelection = .nothingSelected
+    @ObservedObject var viewModel: SignUpViewModel
     
     @Environment (\.dismiss) var dismiss
     var body: some View {
@@ -21,9 +21,12 @@ struct SelectRoleForSignUpView: View {
                 // buttons
                 VStack(spacing: 20){
                     Button(action: {
-                        withAnimation(.smooth) { selectedRole = .student }
+                        withAnimation(.smooth) {
+                            viewModel.selectedRole = .student
+                            
+                        }
                     }, label: {
-                        if selectedRole == .student {
+                        if  viewModel.selectedRole == .student {
                             Text("A Student")
                                 .modifier(SelectedButton())
                         }else{
@@ -33,9 +36,12 @@ struct SelectRoleForSignUpView: View {
                     })
                     
                     Button(action: {
-                        withAnimation(.smooth) { selectedRole = .teacher }
+                        withAnimation(.smooth) { 
+                            viewModel.selectedRole = .teacher
+                           
+                        }
                     }, label: {
-                        if selectedRole == .teacher {
+                        if viewModel.selectedRole == .teacher {
                             Text("A Teacher")
                                 .modifier(SelectedButton())
                         }else{
@@ -48,17 +54,19 @@ struct SelectRoleForSignUpView: View {
                 
                 //link to go to next view
                 
-                if selectedRole != .nothingSelected {
-                    NavigationLink("Next") {
-                       SignUpView(selectedRole: selectedRole)
-                            .navigationBarBackButtonHidden(true)
+                if viewModel.selectedRole != .nothingSelected {
+                    Button {
+                        
+                    } label: {
+                        Text("Complete Sign Up")
+                            .font(.custom("Poppins-Medium", size: 22))
+                            .frame(width: 250, height: 55)
+                            .background(.uniBlack)
+                            .foregroundStyle(.uniWhite)
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                            .padding(.top, 90)
                     }
-                    .font(.custom("Poppins-Medium", size: 22))
-                    .frame(width: 200, height: 55)
-                    .background(.uniBlack)
-                    .foregroundStyle(.uniWhite)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                .padding(.top, 90)
+
                 }
          
             
@@ -97,5 +105,5 @@ struct SelectRoleForSignUpView: View {
 }
 
 #Preview {
-    SelectRoleForSignUpView()
+    SelectRoleForSignUpView(viewModel: SignUpViewModel())
 }
