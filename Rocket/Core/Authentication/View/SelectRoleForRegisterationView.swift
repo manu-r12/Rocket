@@ -1,21 +1,14 @@
-//
-//  SelectRoleForRegisterationView.swift
-//  Rocket
-//
-//  Created by Manu on 2024-01-27.
-//
 
 import SwiftUI
 
 struct SelectRoleForSignUpView: View {
-    @ObservedObject var viewModel: SignUpViewModel
-    
+    @ObservedObject var viewModel: UserAuthenticationModel
     @Environment (\.dismiss) var dismiss
     var body: some View {
         VStack {
             
             VStack{
-                Text("Select Role")
+                Text("Select a role")
                     .font(.custom("Poppins-Medium", size: 31))
                 
                 // buttons
@@ -23,7 +16,6 @@ struct SelectRoleForSignUpView: View {
                     Button(action: {
                         withAnimation(.smooth) {
                             viewModel.selectedRole = .student
-                            
                         }
                     }, label: {
                         if  viewModel.selectedRole == .student {
@@ -36,9 +28,8 @@ struct SelectRoleForSignUpView: View {
                     })
                     
                     Button(action: {
-                        withAnimation(.smooth) { 
+                        withAnimation(.smooth) {
                             viewModel.selectedRole = .teacher
-                           
                         }
                     }, label: {
                         if viewModel.selectedRole == .teacher {
@@ -53,29 +44,27 @@ struct SelectRoleForSignUpView: View {
                 .padding(.horizontal, 35)
                 
                 //link to go to next view
-                
                 if viewModel.selectedRole != .nothingSelected {
                     Button {
-                        Task {
+                        Task
+                        {
                            await viewModel.signUp()
                         }
+                       
                         
                     } label: {
                         Text("Complete Sign Up")
-                            .font(.custom("Poppins-Medium", size: 22))
+                            .font(.custom("Poppins-Medium", size: 19))
                             .frame(width: 250, height: 55)
                             .background(.uniBlack)
                             .foregroundStyle(.uniWhite)
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                             .padding(.top, 90)
                     }
-
                 }
-         
-            
             }
-            
         }
+        .frame(maxHeight: .infinity)
         .toolbar(content: {
             ToolbarItem(placement: .topBarLeading) {
                 Image(systemName: "chevron.left")
@@ -88,25 +77,35 @@ struct SelectRoleForSignUpView: View {
                     }
             }
         })
+        .overlay(alignment: .topTrailing, content: {
+            VStack{
+                HStack(spacing: 20){
+                    VStack(alignment: .leading){
+                        Text("Welcome")
+                            .font(.custom("Poppins-SemiBold", size: 22))
+                            .foregroundStyle(.white)
+                        Text(viewModel.currentUser?.profile?.name ?? "Loading..")
+                            .font(.custom("Poppins-Medium", size: 17))
+                            .foregroundStyle(.white)
+                    }
+                    TeacherCirclePFP(imageURL: viewModel.currentUser?.profile?.imageURL(withDimension: 200)?.absoluteString)
+                        .onTapGesture {
+                            SocialAuthentication.shared.signOut()
+                        }
+                }
+            }
+            .padding(.top, -21)
+            .padding(.trailing, 20)
+        })
         .background {
             BlobShape()
                 .offset(x:  60, y: -430)
-               
-            Image("rocket")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 90, height: 90)
-                .offset(x:  60, y: -330)
-            
-            
             BlobShape()
                 .offset(x:  -0, y: 490)
-               
-                
         }
     }
 }
 
 #Preview {
-    SelectRoleForSignUpView(viewModel: SignUpViewModel())
+    SelectRoleForSignUpView(viewModel: UserAuthenticationModel())
 }

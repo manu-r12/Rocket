@@ -96,10 +96,7 @@ struct Teacher_HomeScreenView: View {
                         
                         VStack(spacing: 16){
                             ForEach(0...10, id:\.self){file in
-                                
                                 ClassroomsListView()
-                                   
-                                
                             }
                         }
                            

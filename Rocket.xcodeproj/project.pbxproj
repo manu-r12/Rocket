@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322FD8FF2B77348100807D07 /* UserIconPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322FD8FE2B77348100807D07 /* UserIconPlaceholder.swift */; };
+		322FD9032B77415B00807D07 /* TabbarView_Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322FD9022B77415B00807D07 /* TabbarView_Teacher.swift */; };
+		322FD9052B7741BC00807D07 /* CustomaTabbarView_Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322FD9042B7741BC00807D07 /* CustomaTabbarView_Teacher.swift */; };
+		322FD9082B77453100807D07 /* TabbarView_Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322FD9072B77453100807D07 /* TabbarView_Student.swift */; };
+		322FD90B2B7788DD00807D07 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322FD90A2B7788DD00807D07 /* HomeScreenViewModel.swift */; };
+		322FD90E2B778DFA00807D07 /* BackendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322FD90D2B778DFA00807D07 /* BackendManager.swift */; };
+		322FD9112B778EB500807D07 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322FD9102B778EB500807D07 /* UserModel.swift */; };
 		324AAA3B2B64E918002443CC /* SelectRoleForRegisterationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3A2B64E918002443CC /* SelectRoleForRegisterationView.swift */; };
-		324AAA3D2B64EAD2002443CC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3C2B64EAD2002443CC /* SignUpViewModel.swift */; };
+		324AAA3D2B64EAD2002443CC /* UserAuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3C2B64EAD2002443CC /* UserAuthenticationModel.swift */; };
 		324AAA3F2B64ED5B002443CC /* RoleSelectionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3E2B64ED5B002443CC /* RoleSelectionButtons.swift */; };
 		324AAA412B65109D002443CC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA402B65109D002443CC /* SignUpView.swift */; };
 		32634E342B639015002412BD /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E332B639015002412BD /* WelcomeView.swift */; };
@@ -19,7 +26,6 @@
 		32634E492B63FB82002412BD /* BlobShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E482B63FB82002412BD /* BlobShape.swift */; };
 		3283F7BC2B6FB38D00A8164D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3283F7BB2B6FB38D00A8164D /* GoogleSignIn */; };
 		3283F7BE2B6FB38D00A8164D /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3283F7BD2B6FB38D00A8164D /* GoogleSignInSwift */; };
-		3283F7C02B6FBAD600A8164D /* SignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283F7BF2B6FBAD600A8164D /* SignViewModel.swift */; };
 		329668332B67B59C0087068C /* Student_HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329668322B67B59C0087068C /* Student_HomeScreenView.swift */; };
 		329668372B67E7660087068C /* Student_PDFListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329668362B67E7660087068C /* Student_PDFListView.swift */; };
 		32AB230C2B62AAF70033FB37 /* RocketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AB230B2B62AAF70033FB37 /* RocketApp.swift */; };
@@ -41,7 +47,7 @@
 		32CC36202B6926B8002B7A85 /* ClassroomsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC361F2B6926B8002B7A85 /* ClassroomsListView.swift */; };
 		32CC36222B6928E5002B7A85 /* ClassroomCirclePFP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC36212B6928E5002B7A85 /* ClassroomCirclePFP.swift */; };
 		32D1E8A72B6CAEEC005E1BE8 /* Student_JoinedClassrormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E8A62B6CAEEC005E1BE8 /* Student_JoinedClassrormView.swift */; };
-		32D1E8A92B6CB2CE005E1BE8 /* StudentCirclePFP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E8A82B6CB2CE005E1BE8 /* StudentCirclePFP.swift */; };
+		32D1E8A92B6CB2CE005E1BE8 /* UserCirclePFP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E8A82B6CB2CE005E1BE8 /* UserCirclePFP.swift */; };
 		32D1E8AC2B6CB49E005E1BE8 /* AssignedWorkBoxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E8AB2B6CB49E005E1BE8 /* AssignedWorkBoxItem.swift */; };
 		32D1E8AF2B6CC810005E1BE8 /* Teacher_ClassroomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E8AE2B6CC810005E1BE8 /* Teacher_ClassroomView.swift */; };
 		32D1E8B22B6CCBA0005E1BE8 /* AssignmentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E8B12B6CCBA0005E1BE8 /* AssignmentInfoView.swift */; };
@@ -56,8 +62,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		322FD8FE2B77348100807D07 /* UserIconPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIconPlaceholder.swift; sourceTree = "<group>"; };
+		322FD9022B77415B00807D07 /* TabbarView_Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView_Teacher.swift; sourceTree = "<group>"; };
+		322FD9042B7741BC00807D07 /* CustomaTabbarView_Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomaTabbarView_Teacher.swift; sourceTree = "<group>"; };
+		322FD9072B77453100807D07 /* TabbarView_Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView_Student.swift; sourceTree = "<group>"; };
+		322FD90A2B7788DD00807D07 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		322FD90D2B778DFA00807D07 /* BackendManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendManager.swift; sourceTree = "<group>"; };
+		322FD9102B778EB500807D07 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		324AAA3A2B64E918002443CC /* SelectRoleForRegisterationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleForRegisterationView.swift; sourceTree = "<group>"; };
-		324AAA3C2B64EAD2002443CC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		324AAA3C2B64EAD2002443CC /* UserAuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationModel.swift; sourceTree = "<group>"; };
 		324AAA3E2B64ED5B002443CC /* RoleSelectionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionButtons.swift; sourceTree = "<group>"; };
 		324AAA402B65109D002443CC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		32634E332B639015002412BD /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -66,7 +79,6 @@
 		32634E402B63C55C002412BD /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		32634E432B63CEEC002412BD /* TextFieldCustomStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomStyle.swift; sourceTree = "<group>"; };
 		32634E482B63FB82002412BD /* BlobShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobShape.swift; sourceTree = "<group>"; };
-		3283F7BF2B6FBAD600A8164D /* SignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewModel.swift; sourceTree = "<group>"; };
 		329668322B67B59C0087068C /* Student_HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student_HomeScreenView.swift; sourceTree = "<group>"; };
 		329668362B67E7660087068C /* Student_PDFListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student_PDFListView.swift; sourceTree = "<group>"; };
 		32AB23082B62AAF70033FB37 /* Rocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +102,7 @@
 		32CC361F2B6926B8002B7A85 /* ClassroomsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomsListView.swift; sourceTree = "<group>"; };
 		32CC36212B6928E5002B7A85 /* ClassroomCirclePFP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomCirclePFP.swift; sourceTree = "<group>"; };
 		32D1E8A62B6CAEEC005E1BE8 /* Student_JoinedClassrormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student_JoinedClassrormView.swift; sourceTree = "<group>"; };
-		32D1E8A82B6CB2CE005E1BE8 /* StudentCirclePFP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCirclePFP.swift; sourceTree = "<group>"; };
+		32D1E8A82B6CB2CE005E1BE8 /* UserCirclePFP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCirclePFP.swift; sourceTree = "<group>"; };
 		32D1E8AB2B6CB49E005E1BE8 /* AssignedWorkBoxItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignedWorkBoxItem.swift; sourceTree = "<group>"; };
 		32D1E8AE2B6CC810005E1BE8 /* Teacher_ClassroomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher_ClassroomView.swift; sourceTree = "<group>"; };
 		32D1E8B12B6CCBA0005E1BE8 /* AssignmentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentInfoView.swift; sourceTree = "<group>"; };
@@ -117,6 +129,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		322FD8FD2B77346100807D07 /* PFP */ = {
+			isa = PBXGroup;
+			children = (
+				32CC36212B6928E5002B7A85 /* ClassroomCirclePFP.swift */,
+				32D1E8A82B6CB2CE005E1BE8 /* UserCirclePFP.swift */,
+			);
+			path = PFP;
+			sourceTree = "<group>";
+		};
+		322FD9002B77413600807D07 /* Teacher */ = {
+			isa = PBXGroup;
+			children = (
+				322FD9022B77415B00807D07 /* TabbarView_Teacher.swift */,
+				322FD9042B7741BC00807D07 /* CustomaTabbarView_Teacher.swift */,
+			);
+			path = Teacher;
+			sourceTree = "<group>";
+		};
+		322FD9062B7743A400807D07 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				32CC36142B68FAD3002B7A85 /* CustomTabbarView.swift */,
+				322FD9072B77453100807D07 /* TabbarView_Student.swift */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		322FD9092B77888F00807D07 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				322FD90A2B7788DD00807D07 /* HomeScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		322FD90C2B778DE300807D07 /* BackendManager */ = {
+			isa = PBXGroup;
+			children = (
+				322FD90D2B778DFA00807D07 /* BackendManager.swift */,
+			);
+			path = BackendManager;
+			sourceTree = "<group>";
+		};
+		322FD90F2B778EAB00807D07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				322FD9102B778EB500807D07 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		32634E312B638FF8002412BD /* WelcomeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +191,7 @@
 		32634E352B639186002412BD /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				322FD8FD2B77346100807D07 /* PFP */,
 				32D1E8B72B6CEDB2005E1BE8 /* ChatBubbleItem */,
 				32D1E8AA2B6CB423005E1BE8 /* AssignedWorkBoxItem */,
 				32DC932B2B6A7B3400559C65 /* SearchBar */,
@@ -181,8 +245,7 @@
 		32634E3E2B63C540002412BD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				324AAA3C2B64EAD2002443CC /* SignUpViewModel.swift */,
-				3283F7BF2B6FBAD600A8164D /* SignViewModel.swift */,
+				324AAA3C2B64EAD2002443CC /* UserAuthenticationModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -207,6 +270,7 @@
 		3296682F2B67B5650087068C /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				322FD9092B77888F00807D07 /* ViewModel */,
 				329668312B67B57D0087068C /* Teacher */,
 				329668302B67B5770087068C /* Student */,
 			);
@@ -256,7 +320,9 @@
 		32AB230A2B62AAF70033FB37 /* Rocket */ = {
 			isa = PBXGroup;
 			children = (
-				32D4DFF32B70B4AC0075E689 /* GoogleAuthentication */,
+				322FD90F2B778EAB00807D07 /* Model */,
+				322FD90C2B778DE300807D07 /* BackendManager */,
+				32D4DFF32B70B4AC0075E689 /* SocialAuthentication */,
 				32AB232B2B62B9D40033FB37 /* Info.plist */,
 				32AB23222B62B9830033FB37 /* CoreData */,
 				32AB23212B62B9780033FB37 /* Fonts */,
@@ -333,9 +399,10 @@
 		32CC360E2B68E592002B7A85 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				32CC360F2B68E66A002B7A85 /* TabbarViewModel.swift */,
 				32CC36112B68F779002B7A85 /* TabbarView.swift */,
-				32CC36142B68FAD3002B7A85 /* CustomTabbarView.swift */,
+				32CC360F2B68E66A002B7A85 /* TabbarViewModel.swift */,
+				322FD9062B7743A400807D07 /* Student */,
+				322FD9002B77413600807D07 /* Teacher */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -352,8 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				32CC361C2B691F51002B7A85 /* PDFFIleIcon.swift */,
-				32CC36212B6928E5002B7A85 /* ClassroomCirclePFP.swift */,
-				32D1E8A82B6CB2CE005E1BE8 /* StudentCirclePFP.swift */,
+				322FD8FE2B77348100807D07 /* UserIconPlaceholder.swift */,
 			);
 			path = CustomImageIcons;
 			sourceTree = "<group>";
@@ -406,12 +472,12 @@
 			path = ChatBubbleItem;
 			sourceTree = "<group>";
 		};
-		32D4DFF32B70B4AC0075E689 /* GoogleAuthentication */ = {
+		32D4DFF32B70B4AC0075E689 /* SocialAuthentication */ = {
 			isa = PBXGroup;
 			children = (
 				32D4DFF42B70B4CD0075E689 /* GoogleAuthentication.swift */,
 			);
-			path = GoogleAuthentication;
+			path = SocialAuthentication;
 			sourceTree = "<group>";
 		};
 		32DC93242B6A79DA00559C65 /* Classrooms */ = {
@@ -538,14 +604,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32D1E8A92B6CB2CE005E1BE8 /* StudentCirclePFP.swift in Sources */,
+				32D1E8A92B6CB2CE005E1BE8 /* UserCirclePFP.swift in Sources */,
 				32634E492B63FB82002412BD /* BlobShape.swift in Sources */,
 				32CC361D2B691F51002B7A85 /* PDFFIleIcon.swift in Sources */,
 				32CC36122B68F779002B7A85 /* TabbarView.swift in Sources */,
 				32DC93272B6A79F500559C65 /* Student_ClassroomsView.swift in Sources */,
 				32634E342B639015002412BD /* WelcomeView.swift in Sources */,
 				32634E442B63CEEC002412BD /* TextFieldCustomStyle.swift in Sources */,
-				3283F7C02B6FBAD600A8164D /* SignViewModel.swift in Sources */,
+				322FD9052B7741BC00807D07 /* CustomaTabbarView_Teacher.swift in Sources */,
 				324AAA3B2B64E918002443CC /* SelectRoleForRegisterationView.swift in Sources */,
 				329668332B67B59C0087068C /* Student_HomeScreenView.swift in Sources */,
 				32634E382B63919E002412BD /* ButtonGradients.swift in Sources */,
@@ -557,21 +623,27 @@
 				32E894F32B6B94CB0046066D /* DispatchWorkView.swift in Sources */,
 				32DC932D2B6A7B4400559C65 /* Search_Bar.swift in Sources */,
 				32634E3B2B63971B002412BD /* TextExtension.swift in Sources */,
+				322FD9112B778EB500807D07 /* UserModel.swift in Sources */,
 				32D1E8A72B6CAEEC005E1BE8 /* Student_JoinedClassrormView.swift in Sources */,
-				324AAA3D2B64EAD2002443CC /* SignUpViewModel.swift in Sources */,
+				324AAA3D2B64EAD2002443CC /* UserAuthenticationModel.swift in Sources */,
+				322FD9082B77453100807D07 /* TabbarView_Student.swift in Sources */,
 				324AAA3F2B64ED5B002443CC /* RoleSelectionButtons.swift in Sources */,
+				322FD8FF2B77348100807D07 /* UserIconPlaceholder.swift in Sources */,
 				32CC36102B68E66A002B7A85 /* TabbarViewModel.swift in Sources */,
 				32D1E8AC2B6CB49E005E1BE8 /* AssignedWorkBoxItem.swift in Sources */,
 				32AB230E2B62AAF70033FB37 /* ContentView.swift in Sources */,
 				32CC36202B6926B8002B7A85 /* ClassroomsListView.swift in Sources */,
 				329668372B67E7660087068C /* Student_PDFListView.swift in Sources */,
 				32D1E8BB2B6D11CA005E1BE8 /* SelectClassView.swift in Sources */,
+				322FD9032B77415B00807D07 /* TabbarView_Teacher.swift in Sources */,
 				32DC932A2B6A7A7500559C65 /* ProfileHeader.swift in Sources */,
 				324AAA412B65109D002443CC /* SignUpView.swift in Sources */,
+				322FD90E2B778DFA00807D07 /* BackendManager.swift in Sources */,
 				32AB230C2B62AAF70033FB37 /* RocketApp.swift in Sources */,
 				32CC36172B691B70002B7A85 /* Teacher_HomeScreenView.swift in Sources */,
 				32634E412B63C55D002412BD /* SignInView.swift in Sources */,
 				32AB23182B62AAF90033FB37 /* Rocket.xcdatamodeld in Sources */,
+				322FD90B2B7788DD00807D07 /* HomeScreenViewModel.swift in Sources */,
 				32CC36152B68FAD3002B7A85 /* CustomTabbarView.swift in Sources */,
 				32CC361A2B691C55002B7A85 /* RecievedPDFFilesBox.swift in Sources */,
 				32D1E8B92B6CEDC8005E1BE8 /* ChatBubbleItem.swift in Sources */,

@@ -9,11 +9,7 @@ import SwiftUI
 import GoogleSignIn
 
 struct SignUpView: View {
-    @ObservedObject var viewModel = SignUpViewModel()
-    @State var name: String = ""
-    @State var email: String = ""
-    @State var username: String = ""
-    @State var password: String = ""
+    @ObservedObject var viewModel = UserAuthenticationModel.shared
     @Environment (\.dismiss) var dismiss
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
@@ -25,7 +21,7 @@ struct SignUpView: View {
                         VStack(alignment: .leading, spacing: 10){
                             Text("Sign Up")
                                 .onTapGesture {
-                                    GoogleAuthentication.shared.signOut()
+                                    SocialAuthentication.shared.signOut()
                                     
                                 }
                                 .font(.custom("Poppins-Medium", size: 51))
@@ -54,7 +50,7 @@ struct SignUpView: View {
                             
                             Button(action: {
                                 Task {
-                                    GoogleAuthentication.shared.signIn()
+                                    SocialAuthentication.shared.signIn()
                                 }
                                 
                             }, label: {

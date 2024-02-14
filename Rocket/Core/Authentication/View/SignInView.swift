@@ -9,11 +9,7 @@ import SwiftUI
 import GoogleSignInSwift
 import GoogleSignIn
 struct SignInView: View {
-    @State var email: String = ""
-    @State var username: String = ""
-    @State var password: String = ""
-    
-    @EnvironmentObject var authModel: GoogleAuthentication
+    @ObservedObject var viewModel = UserAuthenticationModel.shared
     
     var body: some View {
         VStack {
@@ -23,9 +19,7 @@ struct SignInView: View {
                     Text("Sign In")
                         .font(.custom("Poppins-Medium", size: 51))
                         .onTapGesture {
-                            print("The Current User is:",
-                                  authModel.currentUser?.profile?.name ?? "No user")
-                            print("Token:",GoogleAuthentication.shared.userIdToken)
+                           
                         }
                     
                     HStack(spacing: 7){
@@ -50,27 +44,22 @@ struct SignInView: View {
                 
                 // input fields and login button
                 VStack(spacing: 40){
-                    VStack(spacing: 15){
-                        TextField("Email", text: $email)
-                            .textInputAutocapitalization(.never)
-                            .modifier(TextFieldCustomStyle())
-                        TextField("Username", text: $username)
-                            .modifier(TextFieldCustomStyle())
-                        SecureField("Password", text: $password)
-                            .modifier(TextFieldCustomStyle())
-                    }
-                    
-                  
                     Button(action: {
-                        authModel.signIn()
+                        viewModel.signIn()
                     }, label: {
-                        Text("Sign In")
-                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 58)
-                            .foregroundStyle(.uniWhite)
-                            .font(.custom("Poppins-Medium", size: 21))
-                            .kerning(0.8)
-                            .background(.uniBlack)
-                            .clipShape(Capsule())
+                        HStack {
+                            Image("google")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                            
+                            Text("Sign in")
+                        }
+                        .frame(maxWidth: .infinity, minHeight: 68)
+                        .foregroundStyle(.uniWhite)
+                        .font(.custom("Poppins-Medium", size: 21))
+                        .kerning(0.8)
+                        .background(.uniBlack)
+                        .clipShape(Capsule())
                     })
                 }
                 .padding()
