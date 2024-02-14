@@ -9,12 +9,16 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-  
+    @ObservedObject var googelAuthModel = SocialAuthentication.shared
     
     var body: some View{
-       TabbarView()
-        
-       
+        Group {
+            if googelAuthModel.isLoggedIn {
+                TabbarView()
+            }else{
+                WelcomeView()
+            }
+        }
     }
 }
 

@@ -7,15 +7,12 @@
 
 import SwiftUI
 
-struct CustomTabbarView: View {
-    @Binding var currentTab: Tab
-    
-    
-    
+struct CustomTabbarView_Student: View {
+    @Binding var currentTab: Tab_Student
     var body: some View {
         VStack {
             HStack(spacing: 0){
-                ForEach(Tab.allCases, id: \.rawValue) {tab in
+                ForEach(Tab_Student.allCases, id: \.rawValue) {tab in
                     
                     Button(action: {
                         withAnimation(.smooth) {
@@ -47,10 +44,6 @@ struct CustomTabbarView: View {
               
         )
         
-        
-
-   
-      
     }
 }
 
