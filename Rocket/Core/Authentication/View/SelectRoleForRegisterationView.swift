@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct SelectRoleForSignUpView: View {
-    @ObservedObject var viewModel: UserAuthenticationModel
+    @ObservedObject var viewModel = UserAuthenticationModel.shared
     @Environment (\.dismiss) var dismiss
     var body: some View {
         VStack {
@@ -15,7 +15,9 @@ struct SelectRoleForSignUpView: View {
                 VStack(spacing: 20){
                     Button(action: {
                         withAnimation(.smooth) {
-                            viewModel.selectedRole = .student
+                            DispatchQueue.main.async {
+                                viewModel.selectedRole = .student
+                            }
                         }
                     }, label: {
                         if  viewModel.selectedRole == .student {
@@ -29,7 +31,9 @@ struct SelectRoleForSignUpView: View {
                     
                     Button(action: {
                         withAnimation(.smooth) {
-                            viewModel.selectedRole = .teacher
+                            DispatchQueue.main.async {
+                                viewModel.selectedRole = .teacher
+                            }
                         }
                     }, label: {
                         if viewModel.selectedRole == .teacher {

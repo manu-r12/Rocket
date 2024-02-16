@@ -10,6 +10,7 @@ enum LoginErrors: Codable {
 }
 
 
+
 class SocialAuthentication : ObservableObject {
     
     @Published var currentUser  :  GIDGoogleUser?
@@ -27,32 +28,29 @@ class SocialAuthentication : ObservableObject {
         
         if let profile = currentUser?.profile {
             
-            print("The Profile Info", profile)
+        
             
         }
         
     }
     
     
-    
+
     func checkUserStatus() {
         
-        if(GIDSignIn.sharedInstance.currentUser != nil ){
-            
-            let user = GIDSignIn.sharedInstance.currentUser
-            
-            guard let user  = user else {return}
-            
-            userIdToken = user.idToken
-            
-            currentUser = user
-            
-            
-        }else{
-            self.isLoggedIn = false
-            print("User is not signed in by his google account....")
-            
-        }
+        if let currentUser = GIDSignIn.sharedInstance.currentUser {
+              DispatchQueue.main.async {
+                  self.currentUser = currentUser
+              }
+              userIdToken = currentUser.idToken
+              print("User is signed in by his google account")
+          } else {
+              DispatchQueue.main.async {
+                  self.currentUser = nil
+                  self.isLoggedIn = false
+                  print("User is not signed in by his google account")
+              }
+          }
     }
     
     

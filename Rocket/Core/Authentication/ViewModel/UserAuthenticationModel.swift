@@ -12,7 +12,7 @@ class UserAuthenticationModel: ObservableObject {
     @Published var userData     : User?
     @Published var error        : ReqError?
     
-
+    
     
     var cancellable    =  Set<AnyCancellable>()
     static let shared  =  UserAuthenticationModel()
@@ -24,24 +24,28 @@ class UserAuthenticationModel: ObservableObject {
     
     
     func userDataSubscriber(){
+        
         BackendManager.shared.$user.sink { user in
             self.userData = user
             print(" Debug:: Found the change in User Data from Backend")
             print(self.userData)
         }.store(in: &cancellable)
+        
     }
     
     
     
     func googelUserSubscriber(){
+        
         SocialAuthentication.shared.$currentUser.sink { user in
             self.currentUser = user
         }.store(in: &cancellable)
+        
     }
     
     
     
-    
+    @MainActor
     func signIn() {
         //MARK:  google sign in process
         guard let presentingViewController = (UIApplication.shared.connectedScenes.first as?
@@ -59,12 +63,12 @@ class UserAuthenticationModel: ObservableObject {
                 if let error = error {
                     print("Error in GIDSign In", error.localizedDescription)
                 }
-                print("inside the closure")
+                
                 self.currentUser = user
-                //MARK: authentication req to backend
                 guard let tokenString = self.currentUser?.idToken?.tokenString else {return}
-                print("Calling the backend")
+                
                 BackendManager.shared.singInReq(withToken: tokenString)
+                
             })
             
         }

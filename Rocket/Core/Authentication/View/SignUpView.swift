@@ -92,7 +92,7 @@ struct SignUpView: View {
                     
                 }
             }else{
-                SelectRoleForSignUpView(viewModel: viewModel)
+                SelectRoleForSignUpView()
                    
             }
         }
