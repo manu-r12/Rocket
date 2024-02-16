@@ -14,7 +14,8 @@ class BackendManager: ObservableObject {
     
     static let shared = BackendManager()
     
-    //MARK: Sign Req to backend to authenticate the user for resources
+    //Sign Req to backend to authenticate the user for resources
+    
     func singInReq(withToken token: String)  {
 
         guard  let url = URL(string: "http://localhost:8000/signIn") else {return }
@@ -36,12 +37,12 @@ class BackendManager: ObservableObject {
             
             if let data = data {
                 do{
-                    
                     self.user = try decoder.decode(User.self, from: data)
                     print("Got the data")
-                    print(self.user ?? "No Data found")
-                    SocialAuthentication.shared.isLoggedIn = true
-                    
+                    DispatchQueue.main.async {
+                        print(self.user ?? "No Data found")
+                        SocialAuthentication.shared.isLoggedIn = true
+                    }
                 }catch{
                     
                     print(error.localizedDescription)
