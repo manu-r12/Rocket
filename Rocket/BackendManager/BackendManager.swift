@@ -1,9 +1,31 @@
 import Foundation
+import GoogleSignIn
+import Combine
 
 enum ReqError: Error{
     case wrongURL
     case userNotFound
     case notAuthorized
+    case notSignedInByGoogleAcc
+    case networkError
+}
+
+
+enum GET_REQ_URLS: String {
+    case getUserData = "http://localhost:8000/getUserData"
+    case none = ""
+}
+
+
+struct MakeURLRequest {
+    func make(token: GIDToken, urlString: String) -> URLRequest{
+        let url = URL(string: urlString)
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
+        request.setValue("Bearer \(token.tokenString)", forHTTPHeaderField: "Authorization")
+        
+        return request
+    }
 }
 
 
@@ -12,12 +34,14 @@ class BackendManager: ObservableObject {
     @Published var user  : User?
     @Published var error : ReqError?
     
+    var cancellable = Set<AnyCancellable>()
+    
     static let shared = BackendManager()
     
-    //Sign Req to backend to authenticate the user for resources
     
+    //Sign Req to backend to authenticate the user for resources
     func singInReq(withToken token: String)  {
-
+        
         guard  let url = URL(string: "http://localhost:8000/signIn") else {return }
         
         var request = URLRequest(url: url)
@@ -55,9 +79,8 @@ class BackendManager: ObservableObject {
     }
     
     
-
-    //MARK: Sign Up to backend to create a new user 
     
+    //MARK: Sign Up to backend to create a new user
     @MainActor
     func createUser(withSignUpReq data: SignUpReq) async throws {
         
@@ -81,7 +104,7 @@ class BackendManager: ObservableObject {
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else{
                 print("Response error")
                 throw URLError(.badServerResponse)
-             
+                
             }
             
             let decodedData = try JSONDecoder().decode(User.self, from: responseData)
@@ -96,6 +119,58 @@ class BackendManager: ObservableObject {
         }
         
     }
-
+    
+    
+    
+    
+    //MARK: Generic function for fetching data
+    func fetchDataFromBackend<DT: Codable>(for: DT.Type,
+                                           withUrl url: GET_REQ_URLS,
+                                           completion: @escaping 
+                                           (Result<DT, ReqError>) -> Void)
+        {
+        
+        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+            
+            if let error = error {
+                print(error.localizedDescription)
+                completion(.failure(ReqError.notSignedInByGoogleAcc))
+            }
+            
+            guard let token = user?.idToken else {
+                completion(.failure(ReqError.notSignedInByGoogleAcc))
+                return
+            }
+            
+            let req = MakeURLRequest().make(token: token, urlString: url.rawValue)
+            
+            let task = URLSession.shared.dataTask(with: req) { data, res, error in
+                
+                if let error = error {
+                    print(error.localizedDescription)
+                    completion(.failure(ReqError.networkError))
+                }
+                
+                if let data = data {
+                    
+                    do{
+                        let userDecodedData = try JSONDecoder().decode(DT.self, from: data)
+                        completion(.success(userDecodedData))
+                        
+                    }catch{
+                        completion(.failure(ReqError.userNotFound))
+                        
+                    }
+                }
+            }
+            task.resume()
+                
+            
+        }
+    }
     
 }
+
+
+
+

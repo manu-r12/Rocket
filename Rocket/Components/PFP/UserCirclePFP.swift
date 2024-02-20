@@ -17,7 +17,7 @@ struct StudentCirclePFP: View {
     }
 }
 
-struct TeacherCirclePFP: View {
+struct UserCirclePFP: View {
     let imageURL: String?
     var body: some View {
         AsyncImage(url: URL(string: imageURL ?? "")) { image in
@@ -34,5 +34,5 @@ struct TeacherCirclePFP: View {
 }
 
 #Preview {
-    TeacherCirclePFP(imageURL:  "https://c4.wallpaperflare.com/wallpaper/787/88/904/raiden-shogun-genshin-impact-genshin-impact-baal-hd-wallpaper-preview.jpg")
+    UserCirclePFP(imageURL:  "https://c4.wallpaperflare.com/wallpaper/787/88/904/raiden-shogun-genshin-impact-genshin-impact-baal-hd-wallpaper-preview.jpg")
 }

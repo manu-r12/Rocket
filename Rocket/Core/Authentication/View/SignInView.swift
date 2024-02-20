@@ -9,7 +9,7 @@ import SwiftUI
 import GoogleSignInSwift
 import GoogleSignIn
 struct SignInView: View {
-    @ObservedObject var viewModel = UserAuthenticationModel.shared
+    @ObservedObject var viewModel = SignInViewModel()
     
     var body: some View {
         VStack {

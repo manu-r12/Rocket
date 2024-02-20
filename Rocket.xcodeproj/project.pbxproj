@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321677B62B80A158004931EE /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321677B52B80A158004931EE /* SignInViewModel.swift */; };
 		322FD8FF2B77348100807D07 /* UserIconPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322FD8FE2B77348100807D07 /* UserIconPlaceholder.swift */; };
 		322FD9032B77415B00807D07 /* TabbarView_Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322FD9022B77415B00807D07 /* TabbarView_Teacher.swift */; };
 		322FD9052B7741BC00807D07 /* CustomaTabbarView_Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322FD9042B7741BC00807D07 /* CustomaTabbarView_Teacher.swift */; };
@@ -15,7 +16,7 @@
 		322FD90E2B778DFA00807D07 /* BackendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322FD90D2B778DFA00807D07 /* BackendManager.swift */; };
 		322FD9112B778EB500807D07 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322FD9102B778EB500807D07 /* UserModel.swift */; };
 		324AAA3B2B64E918002443CC /* SelectRoleForRegisterationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3A2B64E918002443CC /* SelectRoleForRegisterationView.swift */; };
-		324AAA3D2B64EAD2002443CC /* UserAuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3C2B64EAD2002443CC /* UserAuthenticationModel.swift */; };
+		324AAA3D2B64EAD2002443CC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3C2B64EAD2002443CC /* SignUpViewModel.swift */; };
 		324AAA3F2B64ED5B002443CC /* RoleSelectionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA3E2B64ED5B002443CC /* RoleSelectionButtons.swift */; };
 		324AAA412B65109D002443CC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324AAA402B65109D002443CC /* SignUpView.swift */; };
 		32634E342B639015002412BD /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32634E332B639015002412BD /* WelcomeView.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		321677B52B80A158004931EE /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		322FD8FE2B77348100807D07 /* UserIconPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIconPlaceholder.swift; sourceTree = "<group>"; };
 		322FD9022B77415B00807D07 /* TabbarView_Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView_Teacher.swift; sourceTree = "<group>"; };
 		322FD9042B7741BC00807D07 /* CustomaTabbarView_Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomaTabbarView_Teacher.swift; sourceTree = "<group>"; };
@@ -70,7 +72,7 @@
 		322FD90D2B778DFA00807D07 /* BackendManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendManager.swift; sourceTree = "<group>"; };
 		322FD9102B778EB500807D07 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		324AAA3A2B64E918002443CC /* SelectRoleForRegisterationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleForRegisterationView.swift; sourceTree = "<group>"; };
-		324AAA3C2B64EAD2002443CC /* UserAuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationModel.swift; sourceTree = "<group>"; };
+		324AAA3C2B64EAD2002443CC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		324AAA3E2B64ED5B002443CC /* RoleSelectionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionButtons.swift; sourceTree = "<group>"; };
 		324AAA402B65109D002443CC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		32634E332B639015002412BD /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -245,7 +247,8 @@
 		32634E3E2B63C540002412BD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				324AAA3C2B64EAD2002443CC /* UserAuthenticationModel.swift */,
+				324AAA3C2B64EAD2002443CC /* SignUpViewModel.swift */,
+				321677B52B80A158004931EE /* SignInViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				32AB23152B62AAF90033FB37 /* Persistence.swift in Sources */,
 				32D4DFF52B70B4CD0075E689 /* GoogleAuthentication.swift in Sources */,
 				32D1E8B62B6CED1B005E1BE8 /* ConversationView.swift in Sources */,
+				321677B62B80A158004931EE /* SignInViewModel.swift in Sources */,
 				32CC36222B6928E5002B7A85 /* ClassroomCirclePFP.swift in Sources */,
 				32D1E8B22B6CCBA0005E1BE8 /* AssignmentInfoView.swift in Sources */,
 				32E894F32B6B94CB0046066D /* DispatchWorkView.swift in Sources */,
@@ -625,7 +629,7 @@
 				32634E3B2B63971B002412BD /* TextExtension.swift in Sources */,
 				322FD9112B778EB500807D07 /* UserModel.swift in Sources */,
 				32D1E8A72B6CAEEC005E1BE8 /* Student_JoinedClassrormView.swift in Sources */,
-				324AAA3D2B64EAD2002443CC /* UserAuthenticationModel.swift in Sources */,
+				324AAA3D2B64EAD2002443CC /* SignUpViewModel.swift in Sources */,
 				322FD9082B77453100807D07 /* TabbarView_Student.swift in Sources */,
 				324AAA3F2B64ED5B002443CC /* RoleSelectionButtons.swift in Sources */,
 				322FD8FF2B77348100807D07 /* UserIconPlaceholder.swift in Sources */,

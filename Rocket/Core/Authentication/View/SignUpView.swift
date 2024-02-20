@@ -9,7 +9,7 @@ import SwiftUI
 import GoogleSignIn
 
 struct SignUpView: View {
-    @ObservedObject var viewModel = UserAuthenticationModel.shared
+    @ObservedObject var viewModel = SignUpViewModel()
     @Environment (\.dismiss) var dismiss
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
@@ -92,7 +92,7 @@ struct SignUpView: View {
                     
                 }
             }else{
-                SelectRoleForSignUpView()
+                SelectRoleForSignUpView(viewModel: viewModel)
                    
             }
         }

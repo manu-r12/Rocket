@@ -17,6 +17,7 @@ struct ContentView: View {
                 TabbarView()
             }else{
                 WelcomeView()
+                    .environmentObject(googelAuthModel)
             }
         }
     }

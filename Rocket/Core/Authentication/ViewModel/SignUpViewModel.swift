@@ -5,7 +5,7 @@ import GoogleSignIn
 import Combine
 import SwiftUI
 
-class UserAuthenticationModel: ObservableObject {
+class SignUpViewModel: ObservableObject {
     
     @Published var selectedRole : RoleSelection = .nothingSelected
     @Published var currentUser  : GIDGoogleUser?
@@ -15,7 +15,7 @@ class UserAuthenticationModel: ObservableObject {
     
     
     var cancellable    =  Set<AnyCancellable>()
-    static let shared  =  UserAuthenticationModel()
+    static let shared  =  SignUpViewModel()
     
     init(){
         googelUserSubscriber()
@@ -43,37 +43,6 @@ class UserAuthenticationModel: ObservableObject {
         
     }
     
-    
-    
-    @MainActor
-    func signIn() {
-        //MARK:  google sign in process
-        guard let presentingViewController = (UIApplication.shared.connectedScenes.first as?
-                                              UIWindowScene)?.windows.first?.rootViewController
-        else {return}
-        
-        GIDSignIn.sharedInstance.signIn(withPresenting: presentingViewController) { (result, error) in
-            
-            if let error = error{
-                print(error.localizedDescription)
-            }
-            
-            result?.user.refreshTokensIfNeeded(completion: { user, error in
-                
-                if let error = error {
-                    print("Error in GIDSign In", error.localizedDescription)
-                }
-                
-                self.currentUser = user
-                guard let tokenString = self.currentUser?.idToken?.tokenString else {return}
-                
-                BackendManager.shared.singInReq(withToken: tokenString)
-                
-            })
-            
-        }
-        
-    }
     
     
     //MARK: Sign up req to backend

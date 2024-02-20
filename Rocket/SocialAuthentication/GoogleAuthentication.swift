@@ -15,23 +15,21 @@ class SocialAuthentication : ObservableObject {
     
     @Published var currentUser  :  GIDGoogleUser?
     @Published var userIdToken  :  GIDToken?
-    @Published var isLoggedIn   :  Bool = false
     @Published var errorMessage :  String = ""
- 
-    
+    @Published var isLoggedIn   :  Bool =  false {
+        didSet {
+            UserDefaults.standard.set(isLoggedIn, forKey: "UserStatus")
+            UserDefaults.standard.synchronize()
+        
+        }
+    }
     static let shared = SocialAuthentication()
     
     
     init(){
-        
+            // Load isLoggedIn value from UserDefaults during initialization
+        isLoggedIn = UserDefaults.standard.bool(forKey: "UserStatus")
         self.validate()
-        
-        if let profile = currentUser?.profile {
-            
-        
-            
-        }
-        
     }
     
     
@@ -41,9 +39,9 @@ class SocialAuthentication : ObservableObject {
         if let currentUser = GIDSignIn.sharedInstance.currentUser {
               DispatchQueue.main.async {
                   self.currentUser = currentUser
+                  self.userIdToken = currentUser.idToken
               }
-              userIdToken = currentUser.idToken
-              print("User is signed in by his google account")
+            print("User is signed in by his google account")
           } else {
               DispatchQueue.main.async {
                   self.currentUser = nil
@@ -107,7 +105,7 @@ class SocialAuthentication : ObservableObject {
     func signOut(){
         
            GIDSignIn.sharedInstance.signOut()
-        
+
            self.checkUserStatus()
        }
     

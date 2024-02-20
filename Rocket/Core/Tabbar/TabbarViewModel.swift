@@ -21,8 +21,13 @@ class TabbarViewModel: ObservableObject {
     @Published var user: User?
     private var cancellable = Set<AnyCancellable>()
     
+    init() {
+            setUpSubscriber()
+    }
+    
     private func setUpSubscriber(){
-        UserAuthenticationModel.shared.$userData.sink { user in
+        BackendManager.shared.$user.sink { user in
+            print("======== TabbarViewModel Combine ========")
             self.user = user
         }.store(in: &cancellable)
     }

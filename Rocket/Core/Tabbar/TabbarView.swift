@@ -20,7 +20,7 @@ struct TabbarView: View {
                 
                 Group{
                
-                        TabbarView_Teacher()
+                   TabbarView_Teacher()
                    
                 }
             }
