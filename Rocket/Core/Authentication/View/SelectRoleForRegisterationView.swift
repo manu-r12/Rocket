@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct SelectRoleForSignUpView: View {
-    @ObservedObject var viewModel = UserAuthenticationModel.shared
+    @ObservedObject var viewModel: SignUpViewModel
     @Environment (\.dismiss) var dismiss
     var body: some View {
         VStack {
@@ -92,7 +92,7 @@ struct SelectRoleForSignUpView: View {
                             .font(.custom("Poppins-Medium", size: 17))
                             .foregroundStyle(.white)
                     }
-                    TeacherCirclePFP(imageURL: viewModel.currentUser?.profile?.imageURL(withDimension: 200)?.absoluteString)
+                    UserCirclePFP(imageURL: viewModel.currentUser?.profile?.imageURL(withDimension: 200)?.absoluteString)
                         .onTapGesture {
                             SocialAuthentication.shared.signOut()
                         }
@@ -111,5 +111,5 @@ struct SelectRoleForSignUpView: View {
 }
 
 #Preview {
-    SelectRoleForSignUpView(viewModel: UserAuthenticationModel())
+    SelectRoleForSignUpView(viewModel: SignUpViewModel())
 }
